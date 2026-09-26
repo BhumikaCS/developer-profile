@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bhumika C.S - Developer Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: white;
+            text-align: center;
+            padding: 65px 20px 35px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #ffd166;
+            left: 0;
+            bottom: -6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Sections */
+        section {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 35px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+        }
+
+        section h2 {
+            color: #182848;
+            font-size: 26px;
+            margin-bottom: 22px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        section h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 55px;
+            height: 3px;
+            background: #4b6cb7;
+            border-radius: 5px;
+        }
+
+        /* About */
+        #about p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skills span {
+            background: #eef3fc;
+            color: #294a87;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-weight: bold;
+            border: 1px solid #d9e3f5;
+            transition: 0.3s;
+        }
+
+        .skills span:hover {
+            background: #4b6cb7;
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(75, 108, 183, 0.25);
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .project-card {
+            background: #f9fbff;
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid #e1e6ef;
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+            border-color: #b8c8e8;
+        }
+
+        .project-card h3 {
+            color: #3f63ad;
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .project-card strong {
+            color: #182848;
+        }
+
+        /* Contact */
+        .contact-box {
+            background: #f5f8fd;
+            padding: 22px;
+            border-radius: 12px;
+            border-left: 4px solid #4b6cb7;
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: #182848;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            header {
+                padding: 45px 15px 30px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            nav {
+                gap: 18px;
+            }
+
+            section {
+                margin: 22px 15px;
+                padding: 25px;
+            }
+
+            section h2 {
+                font-size: 23px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .skills {
+                gap: 10px;
+            }
+
+            .skills span {
+                padding: 10px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>Bhumika C.S</h1>
+
+        <p>
+            Artificial Intelligence and Machine Learning Student
+        </p>
+
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- About Me -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a third-year B.Tech student specializing in Artificial
+            Intelligence and Machine Learning at NMAM Institute of Technology,
+            Nitte. I am interested in technology, intelligent systems, and
+            data analysis. I enjoy learning new concepts and working on
+            practical projects. Outside academics, I enjoy drawing and dancing.
+        </p>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+
+            <span>Python</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Machine Learning</span>
+            <span>Teamwork</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+
+                <h3>AI Video Summarizer</h3>
+
+                <p>
+                    An AI-based application that converts YouTube videos
+                    into summarized text and audio in a selected language.
+                </p>
+
+                <p>
+                    <strong>Technologies:</strong>
+                    Python, Whisper, BART
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Plant Identifier</h3>
+
+                <p>
+                    A machine learning project that identifies Indian
+                    medicinal plants from images using image classification.
+                </p>
+
+                <p>
+                    <strong>Technologies:</strong>
+                    Python, TensorFlow, Keras, NumPy
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Social Networking Database</h3>
+
+                <p>
+                    A relational database system designed to manage users,
+                    posts, followers, likes, and social networking activities.
+                </p>
+
+                <p>
+                    <strong>Technologies:</strong>
+                    HTML, CSS, JavaScript, Python Flask, SQLite
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Karkala Town & Tourism Explorer</h3>
+
+                <p>
+                    A Flutter-based mobile application designed to help users
+                    explore famous places, restaurants, food, temples,
+                    schools, and colleges in Karkala.
+                </p>
+
+                <p>
+                    <strong>Technology:</strong>
+                    Flutter
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Water Potability Detector</h3>
+
+                <p>
+                    A machine learning system that predicts whether water is
+                    potable or non-potable using physicochemical parameters.
+                </p>
+
+                <p>
+                    <strong>Technology:</strong>
+                    Python, Machine Learning, Extra Trees Classifier
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <div class="contact-box">
+
+            <p>
+                <strong>Email:</strong>
+                your-email@example.com
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                India
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Bhumika C.S | Developer Portfolio
+        </p>
+
+    </footer>
+
+</body>
+</html>
